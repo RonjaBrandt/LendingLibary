@@ -9,7 +9,7 @@ public class Main
 
         BookCatalog bookCatalog = new BookCatalog();
 
-        Book book1 = new Book(1, "An introduction to Java Test", "Matt Greencroft", "12345",
+        Book book1 = new Book(1, "An introduction to Java", "Matt Greencroft", "12345",
                 "Anytown Branch", 400);
         Book book2 = new Book(2, "Better Java", "Joe Le Blanc", "23456", "Anytown Branch",
                 200);
