@@ -34,12 +34,15 @@ public class Main
 
         ui.printBook(book1);
         ui.printBook(book2);
+      try {
+          Book foundBook = bookCatalog.findBook("Better");
+          //if (foundBook != null) {
+              System.out.println("We found " + foundBook.getTitle());
 
-        Book foundBook = bookCatalog.findBook("better");
-        if (foundBook != null){
-            System.out.println("We found " + foundBook.getTitle());
-        }
+      }catch (BookNotFoundException e){
+          System.out.println("The book wasn't found");
 
+      }
         Customer customer = new Customer("Mr", "Michael","Smith","The High Street",
                 "123456","Michael@smith.com", 12345, GenderType.MALE);
 
