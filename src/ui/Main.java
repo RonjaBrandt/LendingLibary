@@ -43,6 +43,18 @@ public class Main
           System.out.println("The book wasn't found");
 
       }
+
+      int myTest = 1;
+
+      try {
+          if (myTest != 2) {
+              throw new RuntimeException("Something went wrong");
+          }
+      }
+      catch (RuntimeException e){
+
+          //do nothing here so we can continue.
+      }
         Customer customer = new Customer("Mr", "Michael","Smith","The High Street",
                 "123456","Michael@smith.com", 12345, GenderType.MALE);
 
