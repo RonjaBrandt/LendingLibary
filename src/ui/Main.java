@@ -67,5 +67,33 @@ public class Main
         System.out.println(dvd1.equals(dvd2));
         System.out.println(customer.equals(customer));
 
+
+        Loan firstLoan = new Loan(1,customer,book1);
+        System.out.println(firstLoan.getDueDate());
+        System.out.println(firstLoan);
+
+
+        LoansRegistry registry = new LoansRegistry();
+
+
+        try {
+            registry.addLoan(firstLoan);
+            System.out.println("addLoan worked");
+        } catch (LoanAlradyExistExeption e) {
+            System.out.println("addLoan failed");
+        }
+
+        try {
+            registry.addLoan(firstLoan);
+            System.out.println("addLoan worked");
+        } catch (LoanAlradyExistExeption e) {
+            System.out.println("addLoan failed");;
+        }
+
+        System.out.println(registry.isBookOnLoan(book1.getId()));
+        firstLoan.endLoan();
+        System.out.println(registry.isBookOnLoan(book1.getId()));
+
+
     }
 }
