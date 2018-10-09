@@ -12,12 +12,17 @@ public class BookCatalog {
         return bookArray;
     }
 
+    public int getNumberOfBooks(){
+        return nextPosition;
+    }
+
     public void addBook(Book newBook){
         bookArray[nextPosition] = newBook;
         nextPosition++;
     }
 
     public Book findBook(String title) throws BookNotFoundException {
+        title = title.trim();
         for(int counter = 0; counter <nextPosition; counter++){
             if(bookArray[counter].getTitle().equalsIgnoreCase(title)){
                 return bookArray[counter];
